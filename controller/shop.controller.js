@@ -15,7 +15,6 @@ class ShopController {
         res.json(shops.rows);
     }
 
-
 }
 
 module.exports = new ShopController();
