@@ -10,7 +10,6 @@ class OrderController {
             prodIdArr.push(element.id);
             prodAmountArr.push(element.amount);
         });
-        console.log(prodIdArr, prodAmountArr);
         const newOrder = await db.query(
             "WITH new_order AS ( INSERT INTO orders (name, email, phone, address, sum) " +
             "VALUES ($1, $2, $3, $4, $5) RETURNING id ) " +
